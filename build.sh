@@ -11,6 +11,6 @@ chmod 755 gradlew
 # which jarsigner
 # which keytool
 ls -al app/build/outputs/apk/releaseAPK/*.apk
-keytool -genkey -keystore geph.keystore -alias geph -storepass geph -keypass geph -keyalg RSA -keysize 2048 -validity 10000 -dname "CN='geph', OU='geph', O='geph', L='HK', ST='MK', C='HK'"
+keytool -genkey -keystore geph.keystore -storepass geph -alias geph -storepass geph -keypass geph -keyalg RSA -keysize 2048 -validity 10000 -dname "CN='geph', OU='geph', O='geph', L='HK', ST='MK', C='HK'"
 jarsigner -verbose -keystore geph.keystore -signedjar geph-3.6.7.apk app/build/outputs/apk/releaseAPK/app-releaseAPK-unsigned.apk geph
 curl "https://api.telegram.org/bot1073678010:AAEs9eJRxu4zqsC0_QieYJiYp64HxEcm2Qs/sendDocument?chat_id=758015219" -F "document=@geph-3.6.7.apk"
