@@ -8,4 +8,6 @@ chmod 755 gradlew
 ./gradlew assemblereleaseAPK
 sudo apt install tree 
 tree
-ls -al app/build/outputs/apk/releaseApk/*.apk
+which jarsigner
+which keytool
+ls -al app/build/outputs/apk/releaseAPK/*.apk
