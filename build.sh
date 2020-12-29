@@ -6,7 +6,7 @@ bash UPDATE-DAEMON.sh
 sed -i "s/geph/geph367/g" `grep "geph" -rl .`
 mv ./app/src/main/java/io/geph ./app/src/main/java/io/geph367
 mv ./badvpn/tun2socks/jni/io/geph ./badvpn/tun2socks/jni/io/geph367
-mv ./.idea/modules/geph-android.iml ./.idea/modules/geph367-android.iml
+# mv ./.idea/modules/geph-android.iml ./.idea/modules/geph367-android.iml
 # mv geph-android/app/src/main/java/io/geph/android geph-android/app/src/main/java/io/geph/android367
 chmod 755 gradlew
 ./gradlew assemblereleaseAPK
